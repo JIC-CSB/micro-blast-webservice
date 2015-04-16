@@ -1,0 +1,41 @@
+<html>
+
+<body>
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+
+<script language='javascript' type='text/javascript'>
+function submitForm() {
+	$.post(
+		"http://localhost:5000/blast",
+		{ sequence : document.forms['blastform'].elements['sequence'].value},
+		function(data) {
+        	var response = jQuery.parseJSON(data);
+        	var n_response = response.length;
+        	var new_inner = '';
+        	console.log(n_response);
+        	for (var i = 0; i < n_response; i++) {
+        		cid = response[i]['ConstructID'];
+        		match_percent = response[i]['PercentID'];
+        		new_inner += cid + ' ' + match_percent + '<br>';
+        	}
+          	results_div = document.getElementById("blast_results");	
+          	results_div.innerHTML = new_inner;	
+		}
+
+	);
+}
+</script>
+
+<h1>ENSA BLAST</h1>
+
+<form id=blastform>
+<input type="text" name="sequence">
+<input type="button" value="search" onclick="submitForm()">
+</form>
+
+<h2>Results</h2>
+<div id="blast_results">
+</body>
+
+</html>
