@@ -2,11 +2,12 @@
 
 ## Install Blast
 
-Download blast from the [ncbi ftp
-site](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and install
-it. For example by downloading the [compiled
-binary](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.30+-x64-linux.tar.gz)
+Download blast from the [ncbi ftp site](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) and install
+it. For example by downloading the [compiled binary](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.30+-x64-linux.tar.gz)
 and copying the content of the ``bin`` directory to ``/usr/local/bin``.
+
+- ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+- ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.30+-x64-linux.tar.gz
 
 ## Install the Python dependencies
 
